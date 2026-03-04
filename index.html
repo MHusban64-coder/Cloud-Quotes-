@@ -4,16 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cloud Quotes</title>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="./favicon00.png" type="image/x-icon">
   </head>
-  <body>
-    <!-- <h1>firestore database</h1> -->
+  <body class="min-h-screen bg-slate-100 text-slate-900">
+    <main class="mx-auto w-full max-w-3xl px-4 py-10">
+      <h1 class="text-center text-4xl font-semibold sm:text-5xl">Cloud Quotes</h1>
+      <p class="mt-2 text-center text-base text-slate-600 sm:text-lg">A Firestore Powered Quotation App</p>
 
-    <h1>"Cloud Quotes – A Firestore Powered Quotation App"</h1>
+      <section class="mt-8 rounded-xl bg-white p-5 shadow-sm sm:p-6">
+        <div class="flex flex-col items-center gap-4">
+          <label for="quoteInput" class="text-sm font-medium text-slate-700">Enter your quote</label>
+          <input
+            type="text"
+            placeholder="Type your quote here..."
+            id="quoteInput"
+            class="w-full rounded-lg border border-slate-300 px-4 py-3 text-center text-base focus:outline-none focus:ring-2 focus:ring-blue-400 sm:w-3/4"
+          />
+          <button
+            id="addBtn"
+            class="w-full rounded-lg bg-blue-600 px-8 py-3 text-lg font-semibold text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 sm:w-auto"
+          >
+            Add Quote
+          </button>
+        </div>
+      </section>
 
-    <input type="text" placeholder="enter your quote" id="quoteInput" />
-    <button id="addBtn">Add Quote</button>
-    <ul id="quoteList"></ul>
+      <section class="mt-8 rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+        <h2 class="mb-4 text-xl font-semibold text-slate-800">Recent Quotes</h2>
+        <ul id="quoteList" class="space-y-3"></ul>
+      </section>
+    </main>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
